@@ -1,0 +1,20 @@
+[project]
+name = "devsentinel"
+version = "0.1.0"
+description = "Local multimodal developer companion"
+authors = [{name = "DevSentinel Team"}]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "PySide6",
+    "pyttsx3",
+    "sounddevice",
+]
+
+[project.optional-dependencies]
+whisper = ["openai-whisper"]
+vosk = ["vosk"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
